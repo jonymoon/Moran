@@ -6,12 +6,12 @@
     android:background="@color/colorBackground">
 
     <ScrollView
-        android:id="@+id/signin"
+        android:id="@+id/sclV_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/signin_form"
+            android:id="@+id/llayout_login_form"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -48,7 +48,7 @@
                     android:textSize="@dimen/sign_text_size"/>
 
                 <AutoCompleteTextView
-                    android:id="@+id/login_email"
+                    android:id="@+id/autoTxt_login_email"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/sign_view_height"
@@ -70,7 +70,7 @@
                     android:textSize="@dimen/sign_text_size"/>
 
                 <EditText
-                    android:id="@+id/login_password"
+                    android:id="@+id/edt_login_password"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/sign_view_height"
@@ -79,7 +79,7 @@
                     android:singleLine="true"
                     android:background="@drawable/text_shape"/>
                 <CheckBox
-                    android:id="@+id/remember_password"
+                    android:id="@+id/chk_remember_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingLeft="5dp"
@@ -89,7 +89,7 @@
                     android:textColor="@color/colorGrey"/>
 
                 <Button
-                    android:id="@+id/login_button"
+                    android:id="@+id/btn_sign_in"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/sign_view_height"
                     android:layout_marginTop="16dp"
@@ -100,7 +100,7 @@
                     android:textSize="@dimen/sign_button_size"/>
 
                 <Button
-                    android:id="@+id/sign_up_buttton"
+                    android:id="@+id/btn_sign_up"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/sign_view_height"
                     android:layout_marginTop="16dp"

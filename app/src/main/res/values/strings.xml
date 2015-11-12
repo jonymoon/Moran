@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">蓦然</string>
-    
+
+    <!--登陆、注册-->
+    <string name="prompt_nickname">昵称:</string>
     <string name="prompt_email">邮箱：</string>
     <string name="prompt_password">密码：</string>
     <string name="prompt_comfirm_password">重复密码：</string>
@@ -9,11 +11,21 @@
     <string name="sign_up">注册新账号</string>
     <string name="sign_in">登陆账号</string>
     <string name="prompt_remember_password">记住密码</string>
+
+    <!-- 通用提示 -->
+    <string name="error_empty_nickname">昵称不能为空</string>
+    <string name="error_patten_nickname">昵称格式错误</string>
     
-    <string name="error_empty_email">输入邮箱</string>
+    <string name="error_empty_email">邮箱不能为空</string>
     <string name="error_patten_email">邮箱格式错误</string>
+    
     <string name="error_empty_password">密码不能为空</string>
-    <string name="error_length_password">密码长度不于6</string>
+    <string name="error_confirm_password">请再次确认密码</string>
+    <string name="error_different_password">密码不一致</string>
+    <string name="error_length_password">密码长度不能小于6位</string>
+    
     <string name="error_inValid">邮箱或密码错误</string>
     <string name="success_signIn">登陆成功</string>
+    
+    <string name="unavailable_network_connection">网络不可用,请检查WIFI或数据连接</string>
 </resources>

@@ -2,8 +2,9 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <!-- 以下为应用配色-->
+    <color name="colorAccent">#304ffe</color>
+
+    <!-- 通用应用配色-->
     <color name="colorBackground">#ebecec</color>
     <color name="colorOrange">#ef7f42</color>
     <color name="colorGrey">#444</color>
