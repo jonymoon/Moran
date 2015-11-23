@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geekband.jonymoon.moran.ui.activity.SquareActivity">
+    <Spinner
+        android:id="@+id/distance_spinner_square"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/select_distance_array"
+        android:textAlignment="center"
+        tools:ignore="UnusedAttribute" />
+    <ListView
+        android:id="@+id/square_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distance_spinner_square"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="44dp"/>
+    <include layout="@layout/footer"/>
+
+
+</RelativeLayout>

@@ -1,7 +1,6 @@
 package com.geekband.jonymoon.moran.ui.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -48,7 +47,17 @@ public class SignUpActivity extends AppCompatActivity {
         handler = new Handler(){
             @Override
             public void handleMessage(Message msg) {
-                Toast.makeText(getApplicationContext(), msg.toString(), Toast.LENGTH_LONG).show();
+                switch (msg.what){
+                    case SUCCESS:
+                        Toast.makeText(getApplicationContext(), msg.obj.toString(), Toast.LENGTH_LONG).show();
+                        break;
+                    case ERROR:
+                        Toast.makeText(getApplicationContext(),"注册失败", Toast.LENGTH_LONG).show();
+                        break;
+                    default:
+                        break;
+                }
+
             }
         };
     }
@@ -188,7 +197,7 @@ public class SignUpActivity extends AppCompatActivity {
     private void doPostRequest(String path, JSONObject date) {
         try {
             //获得传输实体
-            byte[] entity = date.toString().getBytes();
+            byte[] entity = date.toString().getBytes("UTF-8");
             URL url = new URL(path);
 
             //获取HttpURLConnection实例
@@ -198,8 +207,8 @@ public class SignUpActivity extends AppCompatActivity {
             connection.setUseCaches(false);
             connection.setDoOutput(true);
             connection.setDoInput(true);
-            connection.setRequestProperty("Connect-Type", "application/json");
-            connection.setRequestProperty("Connect-Length", String.valueOf(entity.length));
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Content-Length", String.valueOf(entity.length));
             OutputStream outputStream = connection.getOutputStream();
             outputStream.write(entity);
             outputStream.close();

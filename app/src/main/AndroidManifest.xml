@@ -32,7 +32,10 @@
         <activity
             android:name=".ui.activity.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" >
-
+        </activity>
+        <activity
+            android:name=".ui.activity.SquareActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 
